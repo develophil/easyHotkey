@@ -1,5 +1,12 @@
-
-// 단축키 사용 plugin
+/************************************************************************
+@Name 		:   easyHotkey - jQuery Plugin
+@description:	쉬운 단축키 사용.
+@Revison 	:   1.0
+@Date 		: 	2015-08-31
+@Author		:   Hong, Kwang Pil 
+@use		:	
+	$('*[onclick]').easyHotkey();
+*************************************************************************/
 (function($) {
 	$.fn.easyHotkey = function(options) 
 	{
@@ -94,7 +101,6 @@
 		// 단축키 생성/등록
 		var createHotkeys = function() {
 			var $hotkeys = $('.'+option.cssKey); 
-//			console.log("$hotkeys.length : "+$hotkeys.length);
 			if($hotkeys.length) {
 				$hotkeys.show();
 			}else {
@@ -135,7 +141,6 @@
 
 		// 키가 눌렀다 떨어질 때
 		$('body').keyup(function( event ) {
-//			console.log("keyup : "+event.keyCode);
 			if( event.ctrlKey || event.altKey ) {
 				hideHotkeys();
 			}
